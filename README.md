@@ -72,6 +72,19 @@ This is a object full of methods of responding to the request.
 
   * Sends the client a file with text/js headers.
 
+* `request.respond.css(cssString, code = 200)`
+  
+  * Sends the client a string with text/css headers. 
+  
+* `request.respond.cssFile('path/to/file', code = 200)` 
+
+  * Sends the client a file with text/css headers. 
+
+* `request.respond.image('path/to/image', code = 200)`
+
+  * Sends the client a static image with image/file_extension_here headers.
+  
+
 
 
 
