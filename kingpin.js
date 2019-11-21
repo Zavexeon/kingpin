@@ -15,12 +15,7 @@ class Router {
     this.routes = {}; //static routes
     this.dynamicRoutes = {}; //dynamic routes 
     this.pageNotFound = undefined;
-    this.logCallback = undefined;
-  }
-
-  //onLog gives hook to receive log data of requests
-  onRequest(callback) {
-    this.logCallback = callback;
+    this.onRequest = undefined;
   }
 
 
@@ -37,7 +32,7 @@ class Router {
       body: body
     }
 
-    this.logCallback(requestData);
+    this.onRequest(requestData);
     return requestData;
   }
 
@@ -209,7 +204,7 @@ class Router {
       if (currentRoute in this.routes) { //if current route is in this.routes
         this.routes[currentRoute].callback(request);
 
-        if (this.logCallback !== undefined) {
+        if (this.onRequest !== undefined) {
           this._pushLog(this.routes[currentRoute].type, req.url, request.client.ip);
         }
 
@@ -229,7 +224,7 @@ class Router {
 
             dynamicRouteInfo.callback(request, params);
 
-            if (this.logCallback !== undefined) {
+            if (this.onRequest !== undefined) {
               this._pushLog(dynamicRouteInfo.type, req.url, request.client.ip);
             }
           }
