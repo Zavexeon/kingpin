@@ -45,7 +45,7 @@ router.onRequest((request) => {
 ```
 
 # Request object
-This is the request object passed to request functions, not the `router.pageNotFound` property or the `router.onRequest()` hook. 
+This is the request object passed to request functions and the `router.pageNotFound` property, not the `router.onRequest()` hook. 
 
 #### `request.redirect(url)`
 This redirects the client to a specified url. 
