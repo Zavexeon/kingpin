@@ -44,4 +44,27 @@ router.onRequest((request) => {
 });
 ```
 
+# Request object
+This is the request object passed to request functions, not the `router.pageNotFound` property or the `router.onRequest()` hook. 
+
+#### `request.redirect(url)`
+This redirects the client to a specified url. 
+
+#### `request.client` 
+Returns an object with info on the client. Currently only has the property `ip`.
+
+#### `request.respond`
+This is a object full of methods of responding to the request.
+
+* `request.respond.html(htmlString, code = 200)`
+  * Sends the client a string with text/html headers.
+* `request.respond.htmlFile('path/to/file', code = 200)
+  * Sends the client a file witt text/html headers.
+* `request.respond.js(jsString, code = 200)`
+  * Sends the client a string with text/js headers. 
+* `request.respond.jsFile('path/to/file', code = 200)
+  * Sends the client a file with text/js headers.
+
+
+
 
