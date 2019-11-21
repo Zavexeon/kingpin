@@ -41,9 +41,9 @@ router.pageNotFound = (request) => {
 #### Log requests
 Kingpin has a hook for getting request information. It returns an object with request info.
 ```js
-router.onRequest((request) => {
+router.onRequest = (request) => {
   console.log(request);
-});
+}
 ```
 
 #### Start the router
