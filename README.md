@@ -1,7 +1,7 @@
 # kingpin
 Kingpin is a wrapper for nodejs's `http` module specifically designed for routing.
 
-Disclaimer: `GET` requests are currently the only request type supported, POST and the others are in the works. 
+Disclaimer: `GET` requests are currently the only request type supported, `POST` and the others are in the works. 
 
 # Usage
 
