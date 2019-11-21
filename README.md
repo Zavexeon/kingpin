@@ -7,6 +7,8 @@ Disclaimer: `GET` requests are currently the only request type supported, `POST`
 
 #### Add Kingpin 
 Add the file `kingpin.js` to your project.
+
+Now initialize the router. 
 ```js
 const kp = require('./kingpin.js');
 const router = new kp.Router(3000); //any valid port name can be used here
@@ -42,6 +44,12 @@ Kingpin has a hook for getting request information. It returns an object with re
 router.onRequest((request) => {
   console.log(request);
 });
+```
+
+#### Start the router
+After all your other kingpin code, such as route definitions, setting a 404 page, etc. Call:
+```js
+router.start();
 ```
 
 # Request object
@@ -84,7 +92,6 @@ This is a object full of methods of responding to the request.
 
   * Sends the client a static image with image/file_extension_here headers.
   
-
 
 
 
