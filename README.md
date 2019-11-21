@@ -47,7 +47,7 @@ router.onRequest((request) => {
 ```
 
 #### Start the router
-After all your other kingpin code, such as route definitions, setting a 404 page, etc. Call:
+After all your other kingpin code, such as route definitions, setting a 404 page, etc, call:
 ```js
 router.start();
 ```
