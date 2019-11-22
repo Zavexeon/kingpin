@@ -25,7 +25,7 @@ router.get('/', (request) => {
 #### Dynamic Routes
 Dynamic routes are easy to setup as well. 
 ```js
-router.get('mydynamicroute/{myparameter}', (request, params) => {
+router.get('/mydynamicroute/{myparameter}', (request, params) => {
   //Access route parameters in params argument! In this case, params[myparameter]. 
 });
 ```
