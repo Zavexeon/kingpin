@@ -68,7 +68,7 @@ This is a object full of methods of responding to the request.
 
   * Sends the client a string with text/html headers.
   
-* `request.respond.htmlFile('path/to/file', code = 200)
+* `request.respond.htmlFile('path/to/file', code = 200)`
 
   * Sends the client a file with text/html headers.
   
