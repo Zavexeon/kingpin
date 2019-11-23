@@ -70,7 +70,7 @@ This is a object full of methods of responding to the request.
   
 * `request.respond.htmlFile('path/to/file', code = 200)
 
-  * Sends the client a file witt text/html headers.
+  * Sends the client a file with text/html headers.
   
 * `request.respond.js(jsString, code = 200)`
 
