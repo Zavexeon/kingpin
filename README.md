@@ -39,7 +39,7 @@ router.pageNotFound = (request) => {
 ```
 
 #### Log requests
-Kingpin has a hook for getting request information. It returns an object with request info.
+Kingpin has a hook for getting request information. It returns an object with request info. This is executed after a request is handled.
 ```js
 router.onRequest = (request) => {
   console.log(request);
